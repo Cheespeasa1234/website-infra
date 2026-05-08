@@ -1,0 +1,12 @@
+[Unit]
+Description=Website Service
+
+[Service]
+Type=exec
+ExecStart=/root/.deno/bin/deno task start
+Restart=no
+WorkingDirectory=/www/natelevison.com
+Environment=PATH=/home/nate/.deno/bin
+
+[Install]
+WantedBy=multi-user.target

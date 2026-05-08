@@ -1,0 +1,12 @@
+[Unit]
+Description=Website Service
+
+[Service]
+Type=exec
+Environment=NODE_ENV=production PORT=4000 HOST=127.0.0.1
+ExecStart=/usr/bin/node build/index.js
+Restart=no
+WorkingDirectory=/www/natelevison.com
+
+[Install]
+WantedBy=multi-user.target

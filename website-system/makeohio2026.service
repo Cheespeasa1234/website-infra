@@ -1,0 +1,13 @@
+[Unit]
+Description=MAKEOHIO2026 Dev Server
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/www/MAKEOHIO2026/cloud
+ExecStart=/usr/bin/npm run dev
+Restart=no
+Environment=NODE_ENV=development
+
+[Install]
+WantedBy=multi-user.target

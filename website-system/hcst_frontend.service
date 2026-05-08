@@ -1,0 +1,12 @@
+[Unit]
+Description=Uhl Testing Frontend Service
+
+[Service]
+Type=exec
+Environment=NODE_ENV=production
+ExecStart=/usr/bin/node --env-file=.env build
+Restart=no
+WorkingDirectory=/www/uhl_tests/frontend
+
+[Install]
+WantedBy=multi-user.target

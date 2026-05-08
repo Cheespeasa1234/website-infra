@@ -1,0 +1,10 @@
+[Unit]
+Description=Uhl Testing Backend Service
+
+[Service]
+Type=exec
+ExecStart=/root/.deno/bin/deno task start
+WorkingDirectory=/www/uhl_tests/backend
+
+[Install]
+WantedBy=multi-user.target

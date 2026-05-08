@@ -41,6 +41,6 @@ npm run build
 # setup services
 cp /tmp/website-infra/website-system/*.service /etc/systemd/system/
 systemctl daemon-reload
-systemctl restart nginx
 systemctl enable website.service
-systemctl start website.service
+systemctl restart website.service
+systemctl restart nginx

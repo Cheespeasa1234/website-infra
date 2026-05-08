@@ -9,7 +9,7 @@ apt upgrade -y
 
 # setup firewall
 ufw allow OpenSSH
-ufw enable
+yes | ufw enable
 
 # clone all the things
 mkdir /www
